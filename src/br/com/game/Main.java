@@ -62,6 +62,7 @@ public class Main {
             System.out.println("\nO jogo já foi iniciado.\n");
             return;
         }
+        
         List<List<Space>> spaces = new ArrayList<>();
         for (int i = 0; i < BOARD_LIMIT; i++) {
             spaces.add(new ArrayList<>());
