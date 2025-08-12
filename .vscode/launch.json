@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UIMain",
+            "request": "launch",
+            "mainClass": "br.com.game.UIMain",
+            "projectName": "sudoko_ad1c5d5c"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
