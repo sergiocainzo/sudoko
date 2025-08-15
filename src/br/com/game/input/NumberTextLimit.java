@@ -1,0 +1,26 @@
+package br.com.game.input;
+
+import java.util.List;
+
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.PlainDocument;
+
+import static java.util.Objects.isNull;
+
+public class NumberTextLimit extends PlainDocument {
+
+    private final List<String> NUMBERS = List.of("1", "2", "3", "4", "5", "6", "7", "8", "9");
+
+    @Override
+    public void insertString(final int offs, final String str, final AttributeSet a) throws BadLocationException {
+        // Verifica se a string é nula ou se não é um número válido
+        if (isNull(str) || (!NUMBERS.contains(str))) return;
+
+        // Verifica se o tamanho atual mais o tamanho da string a ser inserida não excede o limite
+        if (getLength() + str.length() <= 1) {
+            super.insertString(offs, str, a);
+        }
+    }
+
+}
