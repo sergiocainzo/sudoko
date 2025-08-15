@@ -41,6 +41,9 @@ public class BoardService {
         List<List<Space>> spaces = new ArrayList<>();
         for (int i = 0; i < BOARD_LIMIT; i++) {
             spaces.add(new ArrayList<>());
+        }
+
+        for (int i = 0; i < BOARD_LIMIT; i++) {
             for (int j = 0; j < BOARD_LIMIT; j++) {
                 var positionConfig = gameConfig.get("%s,%s".formatted(i, j));
                 var expected = Integer.parseInt(positionConfig.split(",")[0]);

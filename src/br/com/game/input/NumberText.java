@@ -9,14 +9,16 @@ import java.awt.Font;
 
 import static java.awt.Font.PLAIN;
 
+import java.awt.Color;
+
 import br.com.game.model.Space;
 
-public class NumberText extends JTextField{
+public class NumberText extends JTextField {
     private final Space space;
 
-    public NumberText(final Space space){
+    public NumberText(final Space space) {
         this.space = space;
-        var dimension = new Dimension(50,50);
+        var dimension = new Dimension(50, 50);
         this.setSize(dimension);
         this.setPreferredSize(dimension);
         this.setVisible(true);
@@ -26,10 +28,13 @@ public class NumberText extends JTextField{
         this.setEnabled(!space.isFixed());
         if (space.isFixed()) {
             this.setText(space.getActual().toString());
+            this.setEditable(false);
+            this.setEnabled(true);
+            this.setForeground(Color.BLACK);
         }
         this.getDocument().addDocumentListener(new DocumentListener() {
 
-            private void changeSpace(){
+            private void changeSpace() {
                 if (getText().isEmpty()) {
                     space.clearSpace();
                     return;
@@ -53,7 +58,7 @@ public class NumberText extends JTextField{
             public void removeUpdate(DocumentEvent arg0) {
                 changeSpace();
             }
-            
+
         });
     }
 }
