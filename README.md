@@ -1,18 +1,37 @@
-## Getting Started
+# Sudoku Game
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Bem-vindo ao projeto **Sudoku Game**, um jogo clássico de lógica e raciocínio. Este projeto foi desenvolvido como parte de um **desafio da DIO (Digital Innovation One)**, focado em aplicar conceitos de programação orientada a objetos e construção de interfaces gráficas em Java.
 
-## Folder Structure
+## Sobre o Jogo
 
-The workspace contains two folders by default, where:
+O Sudoku é um quebra-cabeça numérico onde o objetivo é preencher uma grade 9x9 com números de 1 a 9, garantindo que:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Cada linha contenha todos os números de 1 a 9, sem repetições.
+- Cada coluna contenha todos os números de 1 a 9, sem repetições.
+- Cada uma das nove subgrades 3x3 contenha todos os números de 1 a 9, sem repetições.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Este projeto oferece uma experiência visual intuitiva e interativa para resolver o quebra-cabeça diretamente na tela.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Tecnologias Utilizadas
 
-## Dependency Management
+- **Java 17** – Linguagem principal do projeto
+- **Swing** – Biblioteca gráfica para construção da interface
+- **OOP** – Arquitetura orientada a objetos para organização do código
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Funcionalidades
+
+- Geração de tabuleiros de Sudoku com diferentes níveis de dificuldade
+- Validação automática das jogadas
+- Interface gráfica com botões, campos e feedback visual
+- Opção de reiniciar o jogo ou gerar um novo tabuleiro
+- Verificação de solução correta
+
+## 🚀 Como Executar
+
+1. Certifique-se de ter o **Java 17** instalado.
+2. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/sergiocainzo/sudoko
+   cd sudoku-game
+
