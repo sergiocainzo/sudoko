@@ -21,7 +21,6 @@ Este projeto oferece uma experiência visual intuitiva e interativa para resolve
 ## Funcionalidades
 
 - Geração de tabuleiros de Sudoku com diferentes níveis de dificuldade
-- Validação automática das jogadas
 - Interface gráfica com botões, campos e feedback visual
 - Opção de reiniciar o jogo ou gerar um novo tabuleiro
 - Verificação de solução correta
